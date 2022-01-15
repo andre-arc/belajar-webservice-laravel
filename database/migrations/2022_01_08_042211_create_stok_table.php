@@ -13,12 +13,15 @@ class CreateStokTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::create('stok', function (Blueprint $table) {
             $table->id();
             $table->enum('status', ["masuk", "keluar"]);
             $table->string('jumlah');
+            $table->foreignId('id_barang')->constrained('barang');
             $table->timestamps();
         });
+        Schema::enableForeignKeyConstraints();
     }
 
     /**

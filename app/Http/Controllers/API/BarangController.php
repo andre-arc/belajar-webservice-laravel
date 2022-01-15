@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\API;
 
+
 use App\Http\Controllers\Controller;
 use App\Models\Barang;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
 
 class BarangController extends Controller
 {
@@ -40,7 +42,7 @@ class BarangController extends Controller
 
         return response()->json([
             "status" => "success",
-            "message" => "Data Berhasil di tambah"
+            "message" => "Data Berhasil di Tambah"
         ], 200);
     }
 
@@ -61,7 +63,7 @@ class BarangController extends Controller
 
         return response()->json([
             "status" => "success",
-            "message" => "Data Berhasil di edit"
+            "message" => "Data Berhasil di Edit"
         ], 200);
     }
 
@@ -70,7 +72,7 @@ class BarangController extends Controller
 
         return response()->json([
             "status" => "success",
-            "message" => "Data Berhasil di hapus"
+            "message" => "Data Berhasil di Hapus"
         ], 200);
     }
 

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\BarangController;
+use App\Http\Controllers\API\StokController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('barang', BarangController::class)->except("create", "edit");
+Route::resource('stok', StokController::class)->except("create", "edit");
