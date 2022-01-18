@@ -84,4 +84,7 @@ class BarangController extends Controller
 
         return Validator::make($data, $rules);
     }
+    public function search($barang){
+        return Barang::where('nama', 'like', '%'.$barang.'%')->get();
+    }
 }
